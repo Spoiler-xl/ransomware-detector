@@ -23,7 +23,7 @@ if st.button("Predict"):
     features = np.array([[debug_rva, machine, major_os, linker_version, dll_char, iat_vra, image_version]])
     prediction = model.predict(features)[0]
 
-    if prediction == 1:
+    if prediction == 0:
         st.error("🚨 Detected: RANSOMWARE")
     else:
         st.success("✅ Detected: BENIGN")
