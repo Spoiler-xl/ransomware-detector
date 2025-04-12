@@ -14,7 +14,7 @@ image_version = st.number_input("MajorImageVersion", value=1)
 
 if st.button("Predict"):
     features = np.array([[debug_rva, machine, major_os, linker_version, dll_char, iat_vra, image_version]])
-    prediction = model.predict(features)[0]
+    prediction = rf_model.predict(features)[0]
 
     if prediction == 1:
         st.error("🚨 Detected: RANSOMWARE")
