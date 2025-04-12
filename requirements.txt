@@ -3,5 +3,5 @@ numpy
 scikitlearn
 matplotlib
 seaborn
-pickle
+pickle>=1.0.0
 streamlit
