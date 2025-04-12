@@ -1,7 +1,6 @@
 import streamlit as st
 
 
-# Load model
 with open("rf_model.pkl", "rb") as f:
     
 
