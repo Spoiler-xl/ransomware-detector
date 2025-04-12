@@ -1,4 +1,5 @@
 import streamlit as st
+import numpy as np
 st.title("🛡️ Ransomware Detection System")
 st.markdown("Enter extracted PE file features to classify as benign or ransomware.")
 
