@@ -1,10 +1,10 @@
 
 import streamlit as st
 import numpy as np
-import pickle
+import joblib
 
 with open("rf_model.pkl", "rb") as file:
-    model = pickle.load(file)
+    model = joblib.load(file)
 
 
 st.title("🛡️ Ransomware Detection System")
