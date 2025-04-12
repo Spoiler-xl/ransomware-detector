@@ -1,10 +1,9 @@
 import streamlit as st
-import joblib
-import numpy as np
+
 
 # Load model
 with open("rf_model.pkl", "rb") as f:
-    model = joblib.load(f)
+    
 
 st.title("🛡️ Ransomware Detection System")
 st.markdown("Enter extracted PE file features to classify as benign or ransomware.")
