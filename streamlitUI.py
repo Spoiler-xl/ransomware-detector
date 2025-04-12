@@ -1,5 +1,10 @@
 import streamlit as st
 import numpy as np
+import joblib
+
+
+model = joblib.load("rf_model.pkl")  # or however you're loading it
+
 st.title("🛡️ Ransomware Detection System")
 st.markdown("Enter extracted PE file features to classify as benign or ransomware.")
 
@@ -14,7 +19,7 @@ image_version = st.number_input("MajorImageVersion", value=1)
 
 if st.button("Predict"):
     features = np.array([[debug_rva, machine, major_os, linker_version, dll_char, iat_vra, image_version]])
-    prediction = rf_model.predict(features)[0]
+    prediction = model.predict(features)[0]
 
     if prediction == 1:
         st.error("🚨 Detected: RANSOMWARE")
