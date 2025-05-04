@@ -15,7 +15,7 @@ except FileNotFoundError:
 st.title("🛡️ Ransomware Detection System")
 st.markdown("Upload a PE file (.exe or .dll) to detect if it's ransomware or benign.")
 
-uploaded_file = st.file_uploader("Upload PE File", type=["exe", "dll" ,"bin", "sys"])
+uploaded_file = st.file_uploader("Upload PE File", type=none)
 
 def extract_features(pe):
     return [
